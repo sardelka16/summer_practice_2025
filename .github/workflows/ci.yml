@@ -25,5 +25,5 @@ jobs:
         run: dotnet build --configuration Release --no-restore 
 
       - name: Run tests
-        run: dotnet test ./task01tests --no-build --logger:trx
+        run: dotnet test 
         
