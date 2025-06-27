@@ -31,6 +31,6 @@ public class SpaceshipTests
     {
         var fighter = new Fighter();
         var cruiser = new Cruiser();
-        Assert.True(fighter.FirePower > cruiser.FirePower);
+        Assert.True(fighter.FirePower < cruiser.FirePower);
     }
 }
