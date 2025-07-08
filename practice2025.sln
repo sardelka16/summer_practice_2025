@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08tests", "task08tests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComandLib", "ComandLib\ComandLib.csproj", "{EEEC8A48-DD01-4599-955D-E7C4C515AFB4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandRunner", "CommandRunner", "{E01F3CC7-A2CA-70AC-3216-4627813ED4CB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandRunner", "CommandRunner\CommandRunner.csproj", "{3917EE3F-1B68-4C61-9D3D-C5D5F3B100C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemCommands", "FileSystemCommands\FileSystemCommands.csproj", "{589BCA08-CCDB-477E-83C4-9D928FD4863F}"
