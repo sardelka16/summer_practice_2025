@@ -10,7 +10,7 @@ public class AssemblyAnalyzerTests : IDisposable
 
     public AssemblyAnalyzerTests()
     {
-        _testAssemblyPath = "C:/Users/andrei/Desktop/Practice/summer_practice_2025/testClass/bin/Debug/net9.0/testClass.dll";
+        _testAssemblyPath = "../../../../testClass/bin/Debug/net9.0/testClass.dll";
         _outputWriter = new StringWriter();
         _originalOutput = Console.Out;
         Console.SetOut(_outputWriter);
