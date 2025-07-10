@@ -10,7 +10,6 @@ public class AssemblyAnalyzerTests : IDisposable
 
     public AssemblyAnalyzerTests()
     {
-        // Подготовка тестовой среды
         _testAssemblyPath = "C:/Users/andrei/Desktop/Practice/summer_practice_2025/testClass/bin/Debug/net9.0/testClass.dll";
         _outputWriter = new StringWriter();
         _originalOutput = Console.Out;
@@ -19,16 +18,13 @@ public class AssemblyAnalyzerTests : IDisposable
 
     public void Dispose()
     {
-        // Восстановление стандартного вывода
         Console.SetOut(_originalOutput);
         _outputWriter.Dispose();
-        
     }
 
     private string CreateTestAssembly()
     {
-        // В реальном проекте здесь должна быть компиляция тестовой сборки
-        return Path.Combine("testdata", "testClass.dll"); // Пример пути
+        return Path.Combine("testdata", "testClass.dll");
     }
 
     [Fact]
