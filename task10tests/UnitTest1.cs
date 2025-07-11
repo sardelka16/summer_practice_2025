@@ -54,12 +54,12 @@ public class PluginLoaderTests
             
             if (indexA >= 0 && indexB >= 0)
             {
-                Assert.True(indexB < indexA);
+                Assert.True(indexA > indexB);
             }
             
-            if (indexD >= 0 && indexC >= 0)
+            if (indexA >= 0 && indexC >= 0)
             {
-                Assert.True(indexD > indexC);
+                Assert.True(indexC > indexA);
             }
         }
 
