@@ -23,8 +23,8 @@ public class PluginLoaderTests
         {
             var loader = new PluginLoader(_pluginsPath);
             loader.LoadAllAssemblies();
-            
             loader.FindAllPluginTypes();
+
             var pluginTypes = GetPrivateField<List<Type>>(loader, "_pluginTypes");
             var typeNames = pluginTypes.Select(t => t.Name).ToList();
             
@@ -47,10 +47,18 @@ public class PluginLoaderTests
             var pluginNames = sorted.Select(t => t.Name).ToList();
             Assert.Equal("PluginB", pluginNames[0]);
             
-            if (pluginNames.Contains("PluginD"))
+            var indexB = pluginNames.IndexOf("PluginB");
+            var indexA = pluginNames.IndexOf("PluginA");
+            var indexD = pluginNames.IndexOf("PluginD");
+            var indexC = pluginNames.IndexOf("PluginC");
+            
+            if (indexA >= 0 && indexB >= 0)
             {
-                var indexC = pluginNames.IndexOf("PluginC");
-                var indexD = pluginNames.IndexOf("PluginD");
+                Assert.True(indexB < indexA);
+            }
+            
+            if (indexD >= 0 && indexC >= 0)
+            {
                 Assert.True(indexD > indexC);
             }
         }
