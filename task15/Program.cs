@@ -31,7 +31,7 @@ class Program
         plot.Axes.Bottom.TickGenerator = new ScottPlot.TickGenerators.NumericManual(
                 positions: threads,
                 labels: threads.Select(x => x.ToString()).ToArray());
-        plot.SavePng("threads_performance.png", width: 800, height: 600);
+        plot.SavePng("threads_graphic.png", width: 800, height: 600);
         System.Console.WriteLine($"Оптимальное количество потоков: {best.Key}");
     }
 
